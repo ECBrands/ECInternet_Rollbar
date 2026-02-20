@@ -4,7 +4,7 @@
     <?php if ($clientToken = $block->getClientToken()) { ?>
         <script>
             window.ROLLBAR_CLIENT_TOKEN = <?= /* @noEscape */ json_encode($clientToken) ?>;
-            window.ROLLBAR_ENV = <?= /* @noEscape */ json_encode($block->getEnvironment() || 'production') ?>;
+            window.ROLLBAR_ENV = <?= /* @noEscape */ json_encode($block->getEnvironment()) ?>;
         </script>
     <?php } ?>
 <?php } ?>
