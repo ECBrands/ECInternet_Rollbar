@@ -1,0 +1,10 @@
+<?php /** @var \ECInternet\Rollbar\Block\Rollbar\Config $block */ ?>
+
+<?php if ($block->isEnabled()) { ?>
+    <?php if ($clientToken = $block->getClientToken()) { ?>
+        <script>
+            window.ROLLBAR_CLIENT_TOKEN = <?= /* @noEscape */ json_encode($clientToken) ?>;
+            window.ROLLBAR_ENV = <?= /* @noEscape */ json_encode($block->getEnvironment() || 'production') ?>;
+        </script>
+    <?php } ?>
+<?php } ?>

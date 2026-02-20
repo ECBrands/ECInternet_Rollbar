@@ -1,0 +1,22 @@
+{
+	"name": "ecinternet/module-rollbar",
+	"description": "EC Internet Rollbar JS Config",
+	"require": {
+		"php": "^8.1||^8.2||^8.3||^8.4",
+		"ecinternet/base": "*"
+	},
+	"type": "magento2-module",
+	"version": "1.0.0",
+	"license": [
+		"OSL-3.0",
+		"AFL-3.0"
+	],
+	"autoload": {
+		"files": [
+			"registration.php"
+		],
+		"psr-4": {
+			"ECInternet\\InventoryFeatures\\": ""
+		}
+	}
+}
