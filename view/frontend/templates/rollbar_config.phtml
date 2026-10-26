@@ -5,6 +5,7 @@
         <script>
             window.ROLLBAR_CLIENT_TOKEN = <?= /* @noEscape */ json_encode($clientToken) ?>;
             window.ROLLBAR_ENV = <?= /* @noEscape */ json_encode($block->getEnvironment()) ?>;
+            window.ROLLBAR_IGNORE_BOTS = <?= /* @noEscape */ json_encode($block->isIgnoreBots()) ?>;
         </script>
     <?php } ?>
 <?php } ?>

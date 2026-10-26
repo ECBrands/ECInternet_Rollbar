@@ -5,6 +5,7 @@
 		<rollbar_js>
 			<general>
 				<enabled>0</enabled>
+				<ignore_bots>1</ignore_bots>
 			</general>
 		</rollbar_js>
 	</default>

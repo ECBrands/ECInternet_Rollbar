@@ -20,6 +20,11 @@
                     <label>Environment</label>
                     <comment>e.g. production, staging, dev</comment>
                 </field>
+                <field id="ignore_bots" translate="label" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Ignore Bot User Agents</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Skip Rollbar reporting for common bot/crawler user agents.</comment>
+                </field>
             </group>
         </section>
     </system>

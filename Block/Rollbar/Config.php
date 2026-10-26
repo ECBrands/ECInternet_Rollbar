@@ -18,6 +18,8 @@ class Config extends Template
 
     private const XML_PATH_ENVIRONMENT  = 'rollbar_js/general/environment';
 
+    private const XML_PATH_IGNORE_BOTS  = 'rollbar_js/general/ignore_bots';
+
     public function isEnabled(): bool
     {
         return $this->_scopeConfig->isSetFlag(self::XML_PATH_ENABLED, ScopeInterface::SCOPE_STORE);
@@ -33,5 +35,10 @@ class Config extends Template
         $env = (string)$this->_scopeConfig->getValue(self::XML_PATH_ENVIRONMENT, ScopeInterface::SCOPE_STORE);
 
         return $env !== '' ? $env : 'production';
+    }
+
+    public function isIgnoreBots(): bool
+    {
+        return $this->_scopeConfig->isSetFlag(self::XML_PATH_IGNORE_BOTS, ScopeInterface::SCOPE_STORE);
     }
 }
